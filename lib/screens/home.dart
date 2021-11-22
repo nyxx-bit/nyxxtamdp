@@ -15,15 +15,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  late List responseList;
-  late bool _loading;
+  List responseList;
+  bool _loading;
 
   getHeroes() async {
     setState(() {
       _loading = true;
     });
     var url = 'https://akabab.github.io/superhero-api/api/all.json';
-    var res = await http.get(url);
+    var res = await http.get(Uri.parse(url));
     List decodedJson = jsonDecode(res.body);
 
     int code = res.statusCode;

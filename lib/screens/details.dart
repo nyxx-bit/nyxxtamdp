@@ -9,7 +9,7 @@ import 'package:nyxxtamdp/widget/superhero_avatar.dart';
 class Details extends StatefulWidget {
   final HeroItem heroItem;
 
-  Details({required Key key, required this.heroItem}) : super(key: key);
+  Details({Key key, this.heroItem}) : super(key: key);
 
   @override
   _DetailsState createState() => _DetailsState();
@@ -29,9 +29,9 @@ class _DetailsState extends State<Details> {
 
 class SuperheroDetails extends StatefulWidget {
   const SuperheroDetails({
-    required Key key,
-    required this.widget,
-    required this.heroItem,
+    Key key,
+    this.widget,
+    this.heroItem,
   }) : super(key: key);
 
   final Details widget;
@@ -85,10 +85,10 @@ class _SuperheroDetailsState extends State<SuperheroDetails> {
               style: textTheme.headline6,
             ),
             Text(
-              widget.heroItem.biography.fullName
+              widget.heroItem.biography.fullName != null
                   ? widget.heroItem.name
                   : widget.heroItem.biography.fullName,
-              style: textTheme.subtitle1!.copyWith(
+              style: textTheme.subtitle1.copyWith(
                 fontWeight: FontWeight.w300,
               ),
             ),
@@ -272,7 +272,7 @@ class Appearance extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.w500),
           ),
           subtitle: Text(
-            heroItem.appearance.gender,
+            heroItem.appearance.gender ?? 'unknown',
             style: TextStyle(fontWeight: FontWeight.w300),
           ),
         ),
