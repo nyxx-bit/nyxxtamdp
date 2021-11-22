@@ -12,26 +12,26 @@ String heroItemToJson(List<HeroItem> data) =>
 
 class HeroItem {
   HeroItem({
-    required this.id,
-    required this.name,
-    required this.slug,
-    required this.powerstats,
-    required this.appearance,
-    required this.biography,
-    required this.work,
-    required this.connections,
-    required this.images,
+    this.id,
+    this.name,
+    this.slug,
+    this.powerstats,
+    this.appearance,
+    this.biography,
+    this.work,
+    this.connections,
+    this.images,
   });
 
-  int? id;
-  String? name;
-  String? slug;
-  Powerstats? powerstats;
-  Appearance? appearance;
-  Biography? biography;
-  Work? work;
-  Connections? connections;
-  Images? images;
+  int id;
+  String name;
+  String slug;
+  Powerstats powerstats;
+  Appearance appearance;
+  Biography biography;
+  Work work;
+  Connections connections;
+  Images images;
 
   factory HeroItem.fromJson(Map<String, dynamic> json) => HeroItem(
         id: json["id"] == null ? null : json["id"],
@@ -57,31 +57,31 @@ class HeroItem {
         "id": id == null ? null : id,
         "name": name == null ? null : name,
         "slug": slug == null ? null : slug,
-        "powerstats": powerstats == null ? null : powerstats!.toJson(),
-        "appearance": appearance == null ? null : appearance!.toJson(),
-        "biography": biography == null ? null : biography!.toJson(),
-        "work": work == null ? null : work!.toJson(),
-        "connections": connections == null ? null : connections!.toJson(),
-        "images": images == null ? null : images!.toJson(),
+        "powerstats": powerstats == null ? null : powerstats.toJson(),
+        "appearance": appearance == null ? null : appearance.toJson(),
+        "biography": biography == null ? null : biography.toJson(),
+        "work": work == null ? null : work.toJson(),
+        "connections": connections == null ? null : connections.toJson(),
+        "images": images == null ? null : images.toJson(),
       };
 }
 
 class Appearance {
   Appearance({
-    required this.gender,
-    required this.race,
-    required this.height,
-    required this.weight,
-    required this.eyeColor,
-    required this.hairColor,
+    this.gender,
+    this.race,
+    this.height,
+    this.weight,
+    this.eyeColor,
+    this.hairColor,
   });
 
-  Gender? gender;
-  String? race;
-  List<String>? height;
-  List<String>? weight;
-  String? eyeColor;
-  String? hairColor;
+  Gender gender;
+  String race;
+  List<String> height;
+  List<String> weight;
+  String eyeColor;
+  String hairColor;
 
   factory Appearance.fromJson(Map<String, dynamic> json) => Appearance(
         gender:
@@ -101,9 +101,9 @@ class Appearance {
         "gender": gender == null ? null : genderValues.reverse[gender],
         "race": race == null ? null : race,
         "height":
-            height == null ? null : List<dynamic>.from(height!.map((x) => x)),
+            height == null ? null : List<dynamic>.from(height.map((x) => x)),
         "weight":
-            weight == null ? null : List<dynamic>.from(weight!.map((x) => x)),
+            weight == null ? null : List<dynamic>.from(weight.map((x) => x)),
         "eyeColor": eyeColor == null ? null : eyeColor,
         "hairColor": hairColor == null ? null : hairColor,
       };
@@ -116,22 +116,22 @@ final genderValues = EnumValues(
 
 class Biography {
   Biography({
-    required this.fullName,
-    required this.alterEgos,
-    required this.aliases,
-    required this.placeOfBirth,
-    required this.firstAppearance,
-    required this.publisher,
-    required this.alignment,
+    this.fullName,
+    this.alterEgos,
+    this.aliases,
+    this.placeOfBirth,
+    this.firstAppearance,
+    this.publisher,
+    this.alignment,
   });
 
-  String? fullName;
-  String? alterEgos;
-  List<String>? aliases;
-  String? placeOfBirth;
-  String? firstAppearance;
-  String? publisher;
-  Alignment? alignment;
+  String fullName;
+  String alterEgos;
+  List<String> aliases;
+  String placeOfBirth;
+  String firstAppearance;
+  String publisher;
+  Alignment alignment;
 
   factory Biography.fromJson(Map<String, dynamic> json) => Biography(
         fullName: json["fullName"] == null ? null : json["fullName"],
@@ -153,7 +153,7 @@ class Biography {
         "fullName": fullName == null ? null : fullName,
         "alterEgos": alterEgos == null ? null : alterEgos,
         "aliases":
-            aliases == null ? null : List<dynamic>.from(aliases!.map((x) => x)),
+            aliases == null ? null : List<dynamic>.from(aliases.map((x) => x)),
         "placeOfBirth": placeOfBirth == null ? null : placeOfBirth,
         "firstAppearance": firstAppearance == null ? null : firstAppearance,
         "publisher": publisher == null ? null : publisher,
@@ -173,8 +173,8 @@ final alignmentValues = EnumValues({
 
 class Connections {
   Connections({
-    required this.groupAffiliation,
-    required this.relatives,
+    this.groupAffiliation,
+    this.relatives,
   });
 
   String groupAffiliation;
@@ -194,10 +194,10 @@ class Connections {
 
 class Images {
   Images({
-    required this.xs,
-    required this.sm,
-    required this.md,
-    required this.lg,
+    this.xs,
+    this.sm,
+    this.md,
+    this.lg,
   });
 
   String xs;
@@ -222,12 +222,12 @@ class Images {
 
 class Powerstats {
   Powerstats({
-    required this.intelligence,
-    required this.strength,
-    required this.speed,
-    required this.durability,
-    required this.power,
-    required this.combat,
+    this.intelligence,
+    this.strength,
+    this.speed,
+    this.durability,
+    this.power,
+    this.combat,
   });
 
   int intelligence;
@@ -259,8 +259,8 @@ class Powerstats {
 
 class Work {
   Work({
-    required this.occupation,
-    required this.base,
+    this.occupation,
+    this.base,
   });
 
   String occupation;
@@ -279,7 +279,7 @@ class Work {
 
 class EnumValues<T> {
   Map<String, T> map;
-  late Map<T, String> reverseMap;
+  Map<T, String> reverseMap;
 
   EnumValues(this.map);
 
