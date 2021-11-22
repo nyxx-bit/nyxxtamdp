@@ -38,24 +38,24 @@ class _AboutPageState extends State<AboutPage> {
                   ),
                 ),
                 AvatarImage(),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
-                SizedBox(height: 30),
-                Text(
+                const SizedBox(height: 30),
+                const Text(
                   'Kelompok 28',
                   style: TextStyle(
                       fontSize: 25,
                       fontWeight: FontWeight.w700,
                       fontFamily: "Poppins"),
                 ),
-                Text(
+                const Text(
                   'Praktikum MDP 2021',
                   style: TextStyle(fontWeight: FontWeight.w300),
                 ),
-                SizedBox(height: 15),
-                Text(
-                  'Sebuah Grup Newbie yang Sedang Belajar Flutter',
+                const SizedBox(height: 15),
+                const Text(
+                  'Seorang Newbie yang Sedang Belajar Flutter',
                   textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 15, fontFamily: "Poppins"),
                 ),
@@ -131,25 +131,10 @@ class ProfileListItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView(
-        children: <Widget>[
+        children: const <Widget>[
           ProfileListItem(
             icon: LineAwesomeIcons.user,
             text: 'HANA ADILAH',
-            hasNavigation: false,
-          ),
-          ProfileListItem(
-            icon: LineAwesomeIcons.user,
-            text: 'AMEZRY AZMI HANIF SHIDQI',
-            hasNavigation: false,
-          ),
-          ProfileListItem(
-            icon: LineAwesomeIcons.user,
-            text: 'MOCHAMMAD PRATAMA W.',
-            hasNavigation: false,
-          ),
-          ProfileListItem(
-            icon: LineAwesomeIcons.user,
-            text: 'ERANDRI MEKEL ILYASA',
             hasNavigation: false,
           ),
         ],
