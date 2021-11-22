@@ -42,7 +42,7 @@ class SuperHero extends StatelessWidget {
                     width: 12.0,
                   ),
                   Hero(
-                    tag: heroItem.id,
+                    tag: heroItem.id ?? 'unknown',
                     child: SuperheroAvatar(img: heroItem.images.md),
                   ),
                   SizedBox(
@@ -57,13 +57,13 @@ class SuperHero extends StatelessWidget {
                         children: <Widget>[
                           Text(
                             "${heroItem.name}",
-                            style: textTheme.title,
+                            style: textTheme.headline6,
                           ),
                           Text(
                             heroItem.biography.fullName.isEmpty
                                 ? heroItem.name
                                 : heroItem.biography.fullName,
-                            style: textTheme.subtitle.copyWith(
+                            style: textTheme.subtitle1.copyWith(
                               fontWeight: FontWeight.w300,
                             ),
                           ),

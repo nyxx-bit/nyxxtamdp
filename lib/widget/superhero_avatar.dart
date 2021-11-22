@@ -5,7 +5,7 @@ class SuperheroAvatar extends StatelessWidget {
   final img;
 
   const SuperheroAvatar({
-    required Key key,
+    Key key,
     @required this.img,
     this.radius = 40.0,
   }) : super(key: key);
