@@ -81,6 +81,18 @@ class _HomeState extends State<Home> {
         ],
       ),
       body: _loading ? _buildProgressIndicator() : _buildList(),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ), // BottomNavigationBarItem // BottomNavigationBarItem
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "About",
+          ), // BottomNavigationBarItem
+        ], // <BottomNavigationBarItem> []
+      ), // BottomNavigationBar
     );
   }
 
