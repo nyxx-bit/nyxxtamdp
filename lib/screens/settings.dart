@@ -13,7 +13,7 @@ class _SettingsState extends State<Settings> {
   @override
   void initState() {
     super.initState();
-    SchedulerBinding.instance!.addPostFrameCallback(
+    SchedulerBinding.instance.addPostFrameCallback(
       (_) => setTheme(),
     );
   }

@@ -5,7 +5,7 @@ import 'package:nyxxtamdp/widget/superhero.dart';
 class HeroSearch extends SearchDelegate {
   final List all;
 
-  HeroSearch({required this.all});
+  HeroSearch({this.all});
 
   @override
   ThemeData appBarTheme(BuildContext context) {
