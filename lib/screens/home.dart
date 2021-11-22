@@ -4,6 +4,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:nyxxtamdp/podo/heroitem.dart';
+import 'package:nyxxtamdp/screens/about.dart';
 import 'package:nyxxtamdp/screens/search.dart';
 import 'package:nyxxtamdp/screens/settings.dart';
 import 'package:nyxxtamdp/util/const.dart';
@@ -80,19 +81,9 @@ class _HomeState extends State<Home> {
           ),
         ],
       ),
-      body: _loading ? _buildProgressIndicator() : _buildList(),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
-          ), // BottomNavigationBarItem // BottomNavigationBarItem
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "About",
-          ), // BottomNavigationBarItem
-        ], // <BottomNavigationBarItem> []
-      ), // BottomNavigationBar
+      body: _loading
+          ? _buildProgressIndicator()
+          : _buildList(), // BottomNavigationBar
     );
   }
 
