@@ -272,7 +272,7 @@ class Appearance extends StatelessWidget {
                 .copyWith(fontWeight: FontWeight.w500),
           ),
           subtitle: Text(
-            heroItem.appearance.gender ?? 'unknown',
+            heroItem.appearance.gender,
             style: TextStyle(fontWeight: FontWeight.w300),
           ),
         ),
