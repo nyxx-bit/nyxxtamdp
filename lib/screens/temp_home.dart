@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:nyxxtamdp/util/const.dart';
 
-class TempHome extends StatefulWidget {
-  @override
-  _TempHomeState createState() => _TempHomeState();
-}
+class TempHome extends StatelessWidget {
+  const TempHome({Key key}) : super(key: key);
 
-class _TempHomeState extends State<TempHome> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(Constants.appName),
+        backgroundColor: Colors.white,
+        elevation: 0,
+      ),
+    );
   }
 }

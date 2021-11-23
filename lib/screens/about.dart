@@ -14,7 +14,6 @@ class _AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kAppPrimaryColor,
       body: Stack(
         children: <Widget>[
           Padding(
@@ -23,19 +22,6 @@ class _AboutPageState extends State<AboutPage> {
               children: <Widget>[
                 Padding(
                   padding: EdgeInsets.only(top: 20),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.pop(context);
-                        },
-                        child: const AppBarButton(
-                          icon: Icons.arrow_back,
-                        ),
-                      )
-                    ],
-                  ),
                 ),
                 AvatarImage(),
                 const SizedBox(
@@ -84,12 +70,12 @@ class AppBarButton extends StatelessWidget {
           color: Colors.grey.shade200,
           boxShadow: [
             BoxShadow(
-              color: kLightBlack,
+              // color: kLightBlack,
               offset: Offset(1, 1),
               blurRadius: 10,
             ),
             BoxShadow(
-              color: kWhite,
+              // color: kWhite,
               offset: Offset(-1, -1),
               blurRadius: 10,
             ),
@@ -134,7 +120,7 @@ class ProfileListItems extends StatelessWidget {
         children: const <Widget>[
           ProfileListItem(
             icon: LineAwesomeIcons.user,
-            text: 'HANA ADILAH',
+            text: 'Al Khawarismi Atma Pratama',
             hasNavigation: false,
           ),
         ],

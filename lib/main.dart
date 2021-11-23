@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nyxxtamdp/screens/main_screen.dart';
+import 'package:nyxxtamdp/screens/temp_home.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:nyxxtamdp/providers/app_providers.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
           title: Constants.appName,
           theme: appProvider.theme,
           darkTheme: ThemeConfig.darkTheme,
-          home: const MainScreen(),
+          home: MainScreen(),
         );
       },
     );

@@ -4,7 +4,6 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:nyxxtamdp/podo/heroitem.dart';
-import 'package:nyxxtamdp/screens/about.dart';
 import 'package:nyxxtamdp/screens/search.dart';
 import 'package:nyxxtamdp/screens/settings.dart';
 import 'package:nyxxtamdp/util/const.dart';
