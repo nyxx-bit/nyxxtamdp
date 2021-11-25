@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 
 class ThemeConfig {
   static Color lightPrimary = Colors.grey[100];
-  static Color darkPrimary = Color(0xff1f1f1f);
-  static Color lightAccent = Color(0xffd8242a);
-  static Color darkAccent = Color(0xffd8242a);
+  static Color darkPrimary = const Color(0xff1f1f1f);
+  static Color lightAccent = const Color(0xffd8242a);
+  static Color darkAccent = const Color(0xffd8242a);
   static Color lightBG = Colors.grey[100];
-  static Color darkBG = Color(0xff121212);
+  static Color darkBG = const Color(0xff121212);
 
   static ThemeData lightTheme = ThemeData(
     backgroundColor: lightBG,

@@ -28,7 +28,7 @@ class ProfileListItem extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
-        color: Colors.grey.shade300,
+        color: const Color(0xFF4e5559),
       ),
       child: Row(
         children: <Widget>[
@@ -40,7 +40,7 @@ class ProfileListItem extends StatelessWidget {
           Text(
             this.text,
             style: kTitleTextStyle.copyWith(
-                fontWeight: FontWeight.w500, fontFamily: "Poppins"),
+                fontWeight: FontWeight.w300, fontFamily: "Poppins"),
           ),
           Spacer(),
           if (this.hasNavigation)
