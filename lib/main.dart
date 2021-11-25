@@ -1,3 +1,4 @@
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:nyxxtamdp/screens/main_screen.dart';
 import 'package:nyxxtamdp/screens/temp_home.dart';
@@ -30,7 +31,13 @@ class MyApp extends StatelessWidget {
           title: Constants.appName,
           theme: appProvider.theme,
           darkTheme: ThemeConfig.darkTheme,
-          home: MainScreen(),
+          home: AnimatedSplashScreen(
+            duration: 3000,
+            splash: "[n]https://i.ibb.co/Hn1FJbk/ic-logo.png",
+            nextScreen: const MainScreen(),
+            splashTransition: SplashTransition.fadeTransition,
+            backgroundColor: Colors.white,
+          ),
         );
       },
     );

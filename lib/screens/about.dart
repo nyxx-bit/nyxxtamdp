@@ -52,6 +52,7 @@ class _AboutPageState extends State<AboutPage> {
                 //   textAlign: TextAlign.center,
                 //   style: TextStyle(fontSize: 15, fontFamily: "Poppins"),
                 // ),
+                const SizedBox(height: 10),
                 ProfileListItems(),
               ],
             ),
