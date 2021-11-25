@@ -110,7 +110,7 @@ class AvatarImage extends StatelessWidget {
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             image: DecorationImage(
-              image: AssetImage('assets/images/user.jpg'),
+              image: AssetImage('assets/images/ghava.jpeg'),
             ),
           ),
         ),
@@ -148,7 +148,7 @@ class ProfileListItems extends StatelessWidget {
           ProfileListItem(
             icon: LineAwesomeIcons.github,
             text: 'nyxx-bit',
-            hasNavigation: false,
+            hasNavigation: true,
           ),
         ],
       ),
